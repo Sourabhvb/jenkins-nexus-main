@@ -36,8 +36,8 @@ pipeline {
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                         nexusArtifactUploader(
-                            nexusVersion: nexus3,
-                            protocol: http,
+                            nexusVersion: 'nexus3',
+                            protocol: 'http',
                             nexusUrl:'3.208.9.213:8081' ,
                             groupId: 'pom.com.mycompany.app',
                             version: 'pom.1.0-SNAPSHOT',
